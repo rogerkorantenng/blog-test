@@ -4,7 +4,7 @@
     <body>
         <article>
             <h1>
-                <a href="/post">My First Post</a>
+                <a href="/posts/my-first-post">My First Post</a>
             </h1>
                 <p>
                     Millions of customers, including thousands of the fastest-growing startups, use AWS to build fast, keep costs
@@ -15,7 +15,7 @@
 
         <article>
             <h1>
-                <a href="/post">My Second Post</a>
+                <a href="/posts/my-second-post">My Second Post</a>
             </h1>
                 <p>
                     Millions of customers, including thousands of the fastest-growing startups, use AWS to build fast, keep
@@ -25,7 +25,7 @@
 
         <article>
             <h1>
-                <a href="/post">My Third Post</a>
+                <a href="/posts/my-third-post">My Third Post</a>
             </h1>
                 <p>
                     Millions of customers, including thousands of the fastest-growing startups, use AWS to build fast, keep costs
