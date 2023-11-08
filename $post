@@ -1,0 +1,10 @@
+[90m= [39m[34;4mApp\Models\Post[39;24m {#6960
+    [34mid[39m: [35m1[39m,
+    [34mtitle[39m: "[32mMy First Post[39m",
+    [34mexcerpt[39m: "[32mThis is my first post[39m",
+    [34mbody[39m: "[32mOn the 7 thh November 2023, I decided to start a new blog channel which will be used be teach Machine larning and Artificial Intelligence[39m",
+    [34mcreated_at[39m: "[32m2023-11-07 13:06:14[39m",
+    [34mupdated_at[39m: "[32m2023-11-07 13:06:14[39m",
+    [34mpublished_at[39m: [36mnull[39m,
+  }
+
