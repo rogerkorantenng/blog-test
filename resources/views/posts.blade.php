@@ -7,7 +7,10 @@
                     <a href="/posts/{{ $post->slug }}">
                         {{ $post->title }}
                     </a>
-                </h1>SS
+                </h1>
+                <p>
+                    <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
+                </p>
                 <div>
                     {{ $post->excerpt }}
                 </div>
