@@ -16,7 +16,7 @@ use App\Models\Post;
 
 Route::get('/', function () {
     return view('posts', [
-        'posts' => Post::with('category')->get()
+        'posts' => Post::latest()->with('category', 'author')->get()
 
     ]);
 });
@@ -29,9 +29,15 @@ Route::get('posts/{post:slug}', function (Post $post) {
 });
 
 
-Route::get('categories/{category}', function (Category $category) {
+Route::get('categories/{category:slug}', function (Category $category) {
     return view('posts', [
         'posts' => $category->posts
+    ]);
+});
+
+Route::get('authors/{author}', function (User $author) {
+    return view('posts', [
+        'posts' => $author->posts
     ]);
 });
 //    $post = Post::find($slug);

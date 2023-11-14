@@ -11,8 +11,16 @@ class Post extends Model
 
     protected $guarded = [];
 
+    protected $with = ['category', 'author'];
+
+
     public function category(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function author(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
