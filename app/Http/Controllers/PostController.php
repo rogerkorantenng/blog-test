@@ -9,17 +9,21 @@ class PostController extends Controller
 {
     public function index()
     {
-        return view('posts.index', [
-            'posts' => Post::latest()->filter(
-                request(['search', 'category', 'author'])
-            )->paginate(18)->withQueryString()
-        ]);
+        return view('welcome')->with('message', 'Welcome to Homepage');
     }
-
-    public function show(Post $post)
-    {
-        return view('posts.show', [
-            'post' => $post
-        ]);
-    }
+//    public function index()
+//    {
+//        return view('posts.index', [
+//            'posts' => Post::latest()->filter(
+//                        request(['search', 'category', 'author'])
+//                    )->paginate(18)->withQueryString()
+//        ]);
+//    }
+//
+//    public function show(Post $post)
+//    {
+//        return view('posts.show', [
+//            'post' => $post
+//        ]);
+//    }
 }
