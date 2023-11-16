@@ -6,11 +6,6 @@ use Illuminate\Validation\ValidationException;
 
 class SessionsController extends Controller
 {
-    public function create()
-    {
-        return view('sessions.create');
-    }
-
     public function store()
     {
         $attributes = request()->validate([
@@ -18,15 +13,23 @@ class SessionsController extends Controller
             'password' => 'required'
         ]);
 
-        if (! auth()->attempt($attributes)) {
-            throw ValidationException::withMessages([
-                'email' => 'Your provided credentials could not be verified.'
-            ]);
+        if (auth()->attempt($attributes)) {
+            return redirect('/')->with('success', 'Welcome Back!');
         }
 
-        session()->regenerate();
 
-        return redirect('/')->with('success', 'Welcome Back!');
+        throw ValidationException::withMessages([
+            'email' => 'Your provided credentials could not be verified.'
+        ]);
     }
+    public function create()
+    {
+        return view('sessions.create');
+    }
+    public function destroy()
+    {
+        auth()->logout();
 
+        return redirect('/')->with('success', 'Goodbye!');
+    }
 }
